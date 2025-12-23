@@ -8,7 +8,7 @@ daily = """main.py daily [-v VARIABLES]
         Presents weather information by the day for the next 7 days
         -v  Specify what information to display as variables (default VARIABLES=sunrise sunset)"""
 
-def usage(error=none, tool=none):
+def usage(error=None, tool=None):
 
     # print any error message as requested
     if error is not None:
@@ -20,7 +20,7 @@ def usage(error=none, tool=none):
         print(f"{daily}", file=sys.stderr)
     else:
         print(
-            "Weather Forecast Options: \n =========================",
+            "Weather Forecast Options:\n=========================",
             hourly,
             daily,
             sep="\n\n",

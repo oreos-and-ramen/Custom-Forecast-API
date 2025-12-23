@@ -33,3 +33,8 @@ if there is no argument, then display all of the usage messages
 
 lastly, use the sys exit type 1
 ```
+
+Phase 2: Implementation
+------------------------
+I implemented my pseudocode and only had some minor syntax typos. Implementation went well, likely thanks mainly to having a clean reference.
+

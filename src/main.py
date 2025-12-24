@@ -10,10 +10,10 @@ def main():
         usage()
 
     if sys.argv[1] != "daily":
-        usage("Not a valid forecast specifier") # make sure other default works
+        usage("Not a valid forecast specifier") 
 
     if len(sys.argv) > 2:
-        raw_data = get_data(sys.argv[2]) # under assumption that the other defaults will still work
+        raw_data = get_data(sys.argv[2]) 
         cleaned_data = clean_data(raw_data, ["latitude","longitude",sys.argv[1]])
         fix_times(cleaned_data, sys.argv[2])
         return json.dumps(cleaned_data, indent=1)

@@ -1,4 +1,4 @@
-# Sun-Times-API
+# Custom Forecast API
 The finished and polished version of the RESTful Coding Challenge
 
 # Manual

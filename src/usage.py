@@ -1,14 +1,19 @@
 import sys
 
-hourly = """main.py hourly [-v VARIABLES]
+hourly = """main.py hourly [VARIABLES]
         Presents weather information by the hour of the next 7 days
-        -v  Specify what information to display as variables (default 
-        VARIABLES=precipitation_percentage) all seperated by commas only"""
+        VARIABLES  Specify what information to display as variables (default VARIABLES=precipitation_percentage)
+        all seperated by commas only"""
 
-daily = """main.py daily [-v VARIABLES]
+hourly_vars = """        - precipitations percentage"""
+
+daily = """main.py daily [VARIABLES]
         Presents weather information by the day for the next 7 days
-        -v  Specify what information to display as variables (default VARIABLES=sunrise,sunset)
+        VARIABLES  Specify what information to display as variables (default VARIABLES=sunrise,sunset)
         all seperated by commans only"""
+
+daily_vars = """        - sunrise
+        - sunset"""
 
 def usage(error=None, tool=None):
 
@@ -22,9 +27,11 @@ def usage(error=None, tool=None):
         print(f"{daily}", file=sys.stderr)
     else:
         print(
-            "Weather Forecast Options:\n=========================",
+            "\nWeather Forecast Options:\n=========================",
             hourly,
+            hourly_vars,
             daily,
+            daily_vars,
             sep="\n\n",
             end="\n\n",
             file=sys.stderr)

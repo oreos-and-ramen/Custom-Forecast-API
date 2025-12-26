@@ -4,7 +4,9 @@ from usage import usage
 from get_data import get_data
 from clean import clean_data, fix_times
 
-daily_vars = ["sunrise,sunset"]
+# ensure this is a string not a list!
+daily_vars = "sunrise,sunset"
+
 
 def main():
 
